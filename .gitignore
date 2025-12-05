@@ -1,0 +1,77 @@
+# ============================
+# Build artifacts (C projects)
+# ============================
+bin/
+build/
+out/
+obj/
+*.o
+*.a
+*.so
+*.out
+*.exe
+
+# Makefile build outputs
+bin_*
+
+# ============================
+# Editor / Workspace
+# ============================
+.vscode/
+*.code-workspace
+
+# Clangd / LSP / IntelliSense
+compile_commands.json
+
+# ============================
+# macOS system files
+# ============================
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# ============================
+# Logs / Temp files
+# ============================
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*~
+
+# ============================
+# CMake (future expansion)
+# ============================
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# ============================
+# Additional for your repos
+# ============================
+# school repos often include bin/ or obj/ output
+*/bin/
+*/obj/
+*/Debug/
+*/Release/
+
+# Node modules (your React / MERN past projects)
+node_modules/
+
+# Java / Spring Boot artifacts
+*.class
+*.jar
+*.war
+target/
+
+# Unity / C# temp files from your college projects
+*.pdb
+*.mdb
+
+# Archiving / compressed files
+*.zip
+*.tar
+*.gz
+*.7z
