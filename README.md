@@ -4,16 +4,18 @@ A collection of small, focused C labs designed to build strong foundations in
 **system-level programming, embedded concepts, and BSP-style coding patterns.**
 
 This repository is not about solving algorithm problems.  
-Instead, it explores how C behaves close to the hardware by examining:
+Instead, it explores *how C behaves close to the hardware*, including:
 
 - memory and data layout  
 - pointer mechanics  
+- stack / heap / static memory  
+- struct alignment & padding  
 - low-level control flow  
-- function pointers and dispatch tables  
+- function pointers & dispatch tables  
 - patterns used in device drivers and BSP development  
 
-The labs are intentionally small and isolated so concepts can be tested,  
-observed, and documented clearly.
+Each lab is intentionally small, isolated, and fully documented so concepts can be tested,  
+observed, and understood clearly.
 
 ---
 
@@ -23,86 +25,108 @@ observed, and documented clearly.
 embedded-c-labs/
  ├── src/
  │    ├── 01_pointers/       # pointer basics, array vs pointer, function pointers
+ │    ├── 02_memory_layout/   # stack/heap/static layout, struct alignment & padding
  │    └── (more labs soon)
  ├── include/
  │    └── common.h           # simple logging and shared helpers
+ │    └── 02_memory_layout.md
  ├── docs/
  │    └── 01_pointers.md     # notes, diagrams, and observations for Lab 01
  ├── Makefile
  └── README.md
 ```
 
-Future labs will include:
+---
 
-- memory layout experiments (stack / heap / static)  
-- simple ring buffer implementation  
-- micro task-scheduler examples  
-- lock-free and atomic operation experiments  
-- small driver/BSP-style patterns  
+## 🚀 Lab Progress
 
-Each topic will have its own folder under `src/` and its own documentation under `docs/`.
+| Lab | Topic | Status |
+|------|----------------------------|---------|
+| **01** | Pointer basics, arrays vs pointers, function pointers | ✅ Completed |
+| **02** | Memory layout (stack/heap/static), struct alignment & padding | ✅ Completed |
+| **03** | Packed structs & alignment rules | 🔜 Planned |
+| **04** | Simple ring buffer implementation | 🔜 Planned |
+| **05** | Minimal task scheduler (embedded-style) | 🔜 Planned |
+| **06** | Atomic operations & lock-free patterns | 🔜 Planned |
+| **07** | BSP-style dispatch tables | 🔜 Planned |
+
+More labs will be added continuously as learning progresses.
 
 ---
 
 ## ▶️ Build & Run
 
-All labs use a simple Makefile.
+All labs share a simple Makefile.
 
+---
+
+### Build:
 ```sh
 make
 ./bin_pointers
 ```
 
-New labs will introduce additional targets as needed.
+Each lab will introduce its own corresponding binary
+(e.g., bin_memory_layout for Lab 02).
 
 ---
 
 ## 🎯 Purpose
 
-This project is designed to support growth toward:
+This project supports growth toward:
+	•	Embedded Linux & system programming
+	•	BSP & device driver fundamentals
+	•	Understanding AAOS-style HAL → driver → kernel interactions
+	•	Writing deterministic, hardware-aware C code
 
-- Embedded Linux development  
-- BSP & device driver fundamentals  
-- Understanding AAOS HAL → driver → kernel interactions  
-- Writing deterministic, hardware-aware C code  
+The goal is to observe how C interacts with memory and hardware-like patterns,
+similar to what embedded systems and kernel code must handle.
 
-Each lab includes both code and documentation so the learning process is explicit and traceable.
 
 ---
 
 ## 📝 Documentation
 
-Each lab records:
-
-- goals  
-- code behavior  
-- memory/diagram explanations  
-- output logs  
-- what was learned  
-- notes for future labs  
+Every lab includes documentation covering:
+	•	goals
+	•	code behavior
+	•	memory diagrams / struct alignment diagrams
+	•	output logs
+	•	investigation notes
+	•	key learnings
+	•	ideas for next labs
 
 Example:
 
 ```
 docs/
- └── 01_pointers.md
+ ├── 01_pointers.md
+ └── 02_memory_layout.md
 ```
 
-This helps track progress over time and forms a study reference for embedded/BSP development.
+This documentation acts as a long-term study reference for embedded/BSP development.
 
 ---
 
-## 📌 Status
+📌 Status Summary
 
-**Lab 01 (Pointers): complete**  
-Covers:
-- pointer basics  
-- addresses & dereferencing  
-- arrays vs pointers  
-- function pointer dispatch  
+Lab 01 — Pointers
 
-Additional labs will be added daily as the study progresses.
+Includes:
+	•	pointer basics
+	•	dereferencing & address inspection
+	•	arrays vs pointers
+	•	function pointers & dispatch tables
+
+Lab 02 — Memory Layout
+
+Includes:
+	•	stack vs heap vs static memory
+	•	observing memory addresses in practice
+	•	struct alignment rules
+	•	compiler-generated padding
+	•	why alignment matters for embedded/kernels
 
 ---
 
-_This repository will grow continuously as more embedded-focused labs are added._
+This repository will continue to grow with embedded-focused labs and low-level C experiments.
