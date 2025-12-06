@@ -29,9 +29,9 @@ embedded-c-labs/
  │    └── (more labs soon)
  ├── include/
  │    └── common.h           # simple logging and shared helpers
- │    └── 02_memory_layout.md
  ├── docs/
  │    └── 01_pointers.md     # notes, diagrams, and observations for Lab 01
+ │    └── 02_memory_layout.md
  ├── Makefile
  └── README.md
 ```
